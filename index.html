@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senha Interativo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Gerador de Senha</h2>
+        
+        <div class="result-container">
+            <span id="result">Sua senha aparecerá aqui</span>
+            <button class="btn" id="clipboard" title="Copiar para a área de transferência">
+                <i class="fa-regular fa-clipboard"></i>
+            </button>
+        </div>
+
+        <div class="settings">
+            <div class="setting">
+                <label>Tamanho da Senha: <span id="length-val">16</span></label>
+                <input type="range" id="length" min="4" max="32" value="16">
+            </div>
+            
+            <div class="setting">
+                <label for="uppercase">Letras Maiúsculas</label>
+                <input type="checkbox" id="uppercase" checked>
+            </div>
+            
+            <div class="setting">
+                <label for="lowercase">Letras Minúsculas</label>
+                <input type="checkbox" id="lowercase" checked>
+            </div>
+            
+            <div class="setting">
+                <label for="numbers">Números</label>
+                <input type="checkbox" id="numbers" checked>
+            </div>
+            
+            <div class="setting">
+                <label for="symbols">Símbolos</label>
+                <input type="checkbox" id="symbols" checked>
+            </div>
+        </div>
+
+        <button class="btn btn-large" id="generate">Gerar Senha</button>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
